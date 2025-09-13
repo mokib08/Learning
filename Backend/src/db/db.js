@@ -1,17 +1,18 @@
-
 const mongoose = require('mongoose')
 
 function connectDB(){
     mongoose.connect(process.env.MONGODB_URL)
-    .then(()=>{
-        console.log('connect MongoDB');
+    .then(() => {
+        console.log('mongoDB connect');
         
     })
     .catch(err => {
-        console.log('connection err');
+        console.log('MongoDB connection err ', err);
         
     })
 }
 
 
 module.exports = connectDB
+
+
